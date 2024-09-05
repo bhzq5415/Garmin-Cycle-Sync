@@ -3,7 +3,7 @@ name: Garmin Cycle Sync
 on:
   workflow_dispatch: 
   schedule:
-    - cron: '38 10/12 * * *'
+    - cron: '37 10/12 * * *'
   push:
     branches:
       - main
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        platform: [giant, onelap, igp, xingzhe]
+        platform: [giant, onelap, igp]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
